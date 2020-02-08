@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    试做页面 倒计时 跳转
+    Source页面设置 refresh:content，通过JS.setInterval(millis)定时改变倒计时数字
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5;url=./response2.html" >
+    <title>Title</title>
+    <script type="text/javascript">
+        var i = 5;
+        function refresh() {
+            // 间隔定时器 setInterval(String function(),int millis)
+            window.setInterval("reduceSec()",1000);
+        }
+        
+        function reduceSec() {
+            i--;
+            var ele = document.getElementById("refresh");
+            ele.innerHTML = String(i);
+        }
+
+
+    </script>
+</head>
+<body onload="refresh()">
+    <p>页面将在 <span id="refresh" style="color: crimson;font-size: 35px">5</span> 秒后跳转到:response2.html</p>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--
+基本过滤器：从结果集中按条件筛选目标
+类似 StreamAPI的终止操作
+  > :first    this第一个结果
+  > :last     this最后一个结果
+  > not(selector)：this不包含参数结果的
+  > :gt(index)this大于索引
+
+  > :odd      this索引是基数(实际为表的偶数行)
+  > :even     this索引是偶数(实际为表的基数行)
+
+  > :header   "页面所有"标题<h1><h2>...元素
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>基本过滤器</title>
+  <script type="text/javascript" src="../WEB-INF/lib/jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+    $(function () {
+        // 1.设置表格第一行为 红色
+        $("tr:first").css("color","red");
+
+        // 2.除了第一行外 为蓝色
+        // $("tr:not(tr:first)").css("color","blue");
+        $("tr:gt(0)").css("color","blue");
+
+        // 3.设置 偶数行绿色，奇数行灰色
+        $("tr:even").css("color","grey");
+        $("tr:odd").css("color","green");
+
+        // 4.设置 标题为 紫色
+        $(":header").css("color","purple");
+    })
+  </script>
+</head>
+<body>
+  <h1>商品信息</h1>
+  <table border="1px">
+    <tr>
+      <th>商品编号</th>
+      <th>商品名称</th>
+      <th>价格</th>
+      <th>数量</th>
+    </tr>
+    <tr>
+      <td>001</td>
+      <td>电视机</td>
+      <td>2100</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>002</td>
+      <td>洗衣机</td>
+      <td>1100</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>001</td>
+      <td>缝纫机</td>
+      <td>200</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>001</td>
+      <td>割草机</td>
+      <td>11100</td>
+      <td>10</td>
+    </tr>
+  </table>
+</body>
+</html>

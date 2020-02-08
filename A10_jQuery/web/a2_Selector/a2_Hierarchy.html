@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--
+层级关系
+  ancestor "空格" descendant：得到ancestor元素下的"所有"名为descendant的派生元素(descendant后代、派生)
+  parent > child ：获取parent"直接"子元素
+  prev + next : 获取prev近邻的"下一个"兄弟元素
+  prev ~ siblings : 获取prev“之后”的所有兄弟元素
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>层级(关系)选择器</title>
+  <script type="text/javascript" src="../WEB-INF/lib/jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      // 1. 获取 id=d 的所有<a>(element)派生元素
+      alert('"#d a":' + $("#d a").length);
+
+      // 2.获取 id=d 的直接<a>子元素
+      alert('"#d > a": ' + $("#d > a").length);
+
+      // 3.获取 id=d 的下一个<p>兄弟元素
+      alert('"#d + p".html():' + $("#d + p").html());
+
+      // 4.获取 id=d 的所有<p>之后兄弟元素
+      alert('"#d ~ p": ' + $("#d ~ p").length);
+
+      // 5.将 id=d 下所有子元素的<a>文字颜色设置为红色
+      $("#d a").css("color","red");
+    })
+
+
+
+  </script>
+</head>
+<body>
+  <p>c/c++</p>
+  <div id="d">
+    <a>java</a>
+    <p>
+      <a>ios</a>
+    </p>
+    <a>android</a>
+  </div>
+  <p>php</p>
+  <p>ui</p>
+</body>
+</html>

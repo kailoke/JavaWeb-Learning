@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/A10_jQuery/A10_jQuery.iml" filepath="$PROJECT_DIR$/A10_jQuery/A10_jQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/A6_Servlet/A6_Servlet.iml" filepath="$PROJECT_DIR$/A6_Servlet/A6_Servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/A7_JSP/A7_JSP.iml" filepath="$PROJECT_DIR$/A7_JSP/A7_JSP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/A8_Conversation/A8_Conversation.iml" filepath="$PROJECT_DIR$/A8_Conversation/A8_Conversation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/A9_ListenerAndFilter/A9_ListenerAndFilter.iml" filepath="$PROJECT_DIR$/A9_ListenerAndFilter/A9_ListenerAndFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWEB.iml" filepath="$PROJECT_DIR$/JavaWEB.iml" />
+    </modules>
+  </component>
+</project>

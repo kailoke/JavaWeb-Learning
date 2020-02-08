@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--  jQuery(callback)
+一、本质：jQuery(document).ready(Function fn)
+二、作用：DOM就绪后执行fn方法
+三、简写：$(fn)
+  > $ = jQuery  <-  windows.$ = jQuery
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery(callbacK)</title>
+  <!-- 外部链接引入jQuery -->
+  <script type="text/javascript" src="../WEB-INF/lib/jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+    // 1.完整调用
+    jQuery(document).ready(function () {
+        alert("hello jQuery full method invoke")
+    });
+
+    // 2.简写调用
+    jQuery(function () {
+       alert("hello jQuery : jQuery(callback")
+    });
+
+    // 3.jQuery的全局window引用对象 "$" 调用
+    $(function () {
+        alert("hello jQuery abbreviation")
+    });
+  </script>
+</head>
+<body>
+<div id="div"></div>
+</body>
+</html>
