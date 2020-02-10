@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="A11_Ajax">
+    <output-path>$PROJECT_DIR$/out/artifacts/A11_Ajax</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="A11_Ajax/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="A11_Ajax" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -52,8 +52,12 @@ class Encoding extends HttpServletRequestWrapper {
     public String getParameter(String name) {
         // get
         if ("get".equalsIgnoreCase(this.request.getMethod())){
-            return URLDecoder.decode(super.getParameter(name), StandardCharsets.UTF_8);
-        // post
+            try {
+                return URLDecoder.decode(super.getParameter(name), String.valueOf(StandardCharsets.UTF_8));
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            // post
         } else if ("post".equalsIgnoreCase(this.request.getMethod())){
             try {
                 request.setCharacterEncoding("UTF-8");

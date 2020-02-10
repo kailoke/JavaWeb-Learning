@@ -45,13 +45,13 @@ public class VisitTimeServlet extends HttpServlet {
             response.getWriter().println("<h1>您好，欢迎来到本网站</h1>");
         }else {
             String value = lastLoginTime.getValue();
-            response.getWriter().println("<h1>您好，您的最近一次登录时间：" + URLDecoder.decode(value, StandardCharsets.UTF_8) + "</h1>");
+            response.getWriter().println("<h1>您好，您的最近一次登录时间：" + URLDecoder.decode(value, String.valueOf(StandardCharsets.UTF_8)) + "</h1>");
         }
 
         // 记录时间并回写Cookie
         Date date = new Date();
         String timeStr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
-        String encode = URLEncoder.encode(timeStr, StandardCharsets.UTF_8);
+        String encode = URLEncoder.encode(timeStr, String.valueOf(StandardCharsets.UTF_8));
 
         Cookie lastVisit = new Cookie("lastLoginTime", encode);
         // 设置WEB项目有效路径

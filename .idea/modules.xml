@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/A10_jQuery/A10_jQuery.iml" filepath="$PROJECT_DIR$/A10_jQuery/A10_jQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/A11_Ajax/A11_Ajax.iml" filepath="$PROJECT_DIR$/A11_Ajax/A11_Ajax.iml" />
       <module fileurl="file://$PROJECT_DIR$/A6_Servlet/A6_Servlet.iml" filepath="$PROJECT_DIR$/A6_Servlet/A6_Servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/A7_JSP/A7_JSP.iml" filepath="$PROJECT_DIR$/A7_JSP/A7_JSP.iml" />
       <module fileurl="file://$PROJECT_DIR$/A8_Conversation/A8_Conversation.iml" filepath="$PROJECT_DIR$/A8_Conversation/A8_Conversation.iml" />
