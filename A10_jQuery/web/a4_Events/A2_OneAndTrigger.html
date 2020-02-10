@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+> one(type,fn)：事件执行一次后 unbind()
+> trigger(event)：事件触发 Xxx 事件
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery一次性事件与事件触发</title>
+    <script type="text/javascript" src="../WEB-INF/lib/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 一次性事件
+            $("#btn1").one("click",function () {
+                alert("只能点1次哦");
+            });
+
+            // 事件触发
+            var btn2 = $("#btn2");
+            btn2.click(function () {
+                alert("点我！");
+            });
+            btn2.mouseover(function () {
+                $(this).trigger("click");
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" id="btn1" value="按钮1"><br>
+    <input type="button" id="btn2" value="按钮2">
+</body>
+</html>

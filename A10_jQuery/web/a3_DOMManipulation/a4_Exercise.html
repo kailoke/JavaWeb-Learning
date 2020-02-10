@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合练习</title>
+    <script type="text/javascript" src="../WEB-INF/lib/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 点击添加按钮，将输入信息添加至表格中显示
+            // 没行信息有删除按钮，点击删除后删除该行信息
+            $(":button").click(function () {
+                // 1.获取数据
+                var username = $("#username").val();
+                var phone = $("#phone").val();
+                var email = $("#email").val();
+                // 2.填入数据 + 填入复制按钮
+                $("#tab").append($("<tr></tr>"));
+                $("#tab tr:last-child").append($("<td></td>").html(username)).append($("<td></td>").html(phone)).append($("<td></td>").html(email)).
+                    append($("<td><a href='javascript:void(0)'>删除</a></td>").click(function () {
+                    $(this).parents("tr").remove();
+                }));
+            })
+        })
+        
+    </script>
+</head>
+<body>
+    <div align="center">
+        <table id="tab" border="1">
+            <tr>
+                <td>姓名</td>
+                <td>电话</td>
+                <td>邮箱</td>
+                <td>删除</td>
+            </tr>
+        </table>
+        <hr>
+        姓名：<input type="text" id="username">
+        电话：<input type="text" id="phone">
+        邮箱：<input type="text" id="email">
+        <input type="button" value="添加">
+    </div>
+</body>
+</html>

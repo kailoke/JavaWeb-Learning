@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+<!--  子元素过滤器：按子元素条件选择结果集的子元素或者结果集元素
+> :nth-child    序号选择(index start with "1")：
+    > 参数 ood even 奇/偶
+    > n为自变量，可设置 3n+1 来倍数选择
+> :first-child  第一个
+> :last-child   最后个
+> :only-child   条件选择，仅有唯一child的"子元素"
+-->
 <head>
   <meta charset="UTF-8">
   <title>子元素过滤器</title>
-</head>
-<body>
+  <script type="text/javascript" src="../WEB-INF/lib/jquery-3.4.1.js"></script>
+  <script>
+    $(function () {
+      // 设置列表中第2个li字号为30
+      $("ul li:nth-child(2n)").css("font-size",30);
 
+      // 设置第一行为红色
+      $("ul li:first-child").css("color","red");
+
+
+      alert($("ul li:only-child").html());
+    });
+  </script>
+</head>
+
+<body>
+  <ul>
+    <li>Java</li>
+    <li>IOS</li>
+    <li>Python</li>
+    <li>C++</li>
+  </ul>
+  <ul>
+    <li>刘德华</li>
+    <li>张学友</li>
+    <li>郭富城</li>
+  </ul>
+  <ul>
+    <li>NodeJs</li>
+  </ul>
 </body>
 </html>

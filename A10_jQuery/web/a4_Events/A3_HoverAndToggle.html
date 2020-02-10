@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+> hover([over],out)：鼠标悬停时执行悬停函数，鼠标移出时执行移出函数
+> toggle(fn...)：每次操作，顺序执行next事件
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>事件切换</title>
+    <script type="text/javascript" src="../WEB-INF/lib/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 1.鼠标移入div显示信息，移出隐藏信息
+            $("h1").hover(
+                function () {
+                    // $("div").show(2000);
+                    $("div").slideDown(1000);   // 下拉
+                    // $("div").fadeIn(1000);  // 淡入
+                },function () {
+                    // $("div").hide(2000);
+                    $("div").slideUp(1000);     // 上合
+                    // $("div").fadeOut(1000); // 淡出
+            });
+
+            // 2.toggle deprecated since 1.8
+            // $(":button").toggle(
+            // function () {
+            //     alert("1");
+            // },
+            // function () {
+            //     alert("2");
+            // },
+            // function () {
+            //     alert("3");
+            // })
+        })
+    </script>
+</head>
+<body>
+    <h1>jQuery百度百科</h1>
+    <div hidden="hidden">
+        <p>jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。</p>
+        <p>jQuery的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口；具有高效灵活的css选择器，并且可对CSS选择器进行扩展；拥有便捷的插件扩展机制和丰富的插件。jQuery兼容各种主流浏览器，如IE 6.0+、FF 1.5+、Safari 2.0+、Opera 9.0+等。</p>
+    </div>
+
+    <h1>toggle开关事件</h1>
+    <input type="button" id="btn" value="toggle"/>
+</body>
+</html>

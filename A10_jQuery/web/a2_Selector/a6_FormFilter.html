@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--表单过滤器：根据表单类型(type)选择表单中的元素
+一、表单属性，无:option
+    > :input
+    > :text
+    > :password
+    > :radio
+    > :checkbox
+    > :submit
+    > :image
+    > :reset
+    > :button
+    > :file
+    > :hidden
+二、表单对象属性：一般跟在表单过滤器之后
+    > :checked  (匹配 单选、复选框中 被选中的元素)
+    > :selected (匹配 下拉框中 被选中的元素
+        <select> <option>   $("select option:selected")
+    > :enabled
+    > :disabled
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>表单过滤器</title>
+    <script type="text/javascript" src="../WEB-INF/lib/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            // username和password失去焦点后，判断录入的数据不能为空
+            $(":input[name=username],:password").blur(function () {
+                // 获取数据
+                var username = $(this).val();
+                if ($.trim(username) === ""){
+                    alert($(this).attr("name") + "不能为空！");
+                }
+            });
+
+            // 对button添加点击事件，提交表单(提交事件)
+            $(":button").click(function () {
+                $("form").submit();
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        Username:<input type="text" name="username"><br>
+        Password:<input type="password" name="password"><br>
+        <input type="button" value="按钮">
+    </form>
+</body>
+</html>

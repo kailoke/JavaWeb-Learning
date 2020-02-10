@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+一、内部插入，选中对象的内部进行插入
+> prepend(content|fn)   头插
+> append(content|fn)    追加
+> prependTo(content)    obj prependInto src
+> appendTo(content)     obj appendInto src
+
+二、外部插入，选中对象的外部进行插入
+> before(content|fn)    之前
+> after(content|fn)     之后
+> insertBefore(content) obj insertBefore src
+> insertAfter(content)  obj insertAfter src
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>文档操作：插入</title>
+    <script type="text/javascript" src="../WEB-INF/lib/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 1.1在select开始处添加 学前班 选项
+            $("select").prepend($("<option value=\"学前班\">学前班</option>"))
+
+            // 1.2在select最后出添加 研究生 选项
+            $("<option value=\"研究生\">研究生</option>").appendTo(("#edu"));
+
+            // 外部插入
+            // 2.1在select开始处添加 幼儿园 选项
+            $("select option:first").before($("<option value='幼儿园'>幼儿园</option>"));
+
+            // 2.2在select最后出添加 博士生 选项
+            $("<option value='博士生'>博士生</option>").insertAfter($("[value=研究生]"));
+        })
+    </script>
+</head>
+<body>
+    <select id="edu" name="edu">
+        <option value="小学">小学</option>
+        <option value="中学">中学</option>
+        <option value="大学">大学</option>
+    </select>
+</body>
+</html>
