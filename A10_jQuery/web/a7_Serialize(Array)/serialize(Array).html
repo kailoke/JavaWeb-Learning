@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+> serialize() : 将jQuery表单对象的提交参数序列化为 请求体参数
+> serializeArray() : 将jQuery表单对象的提交参数序列化为 标签name,value对应的 JSON对象数组
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>序列化(数组)</title>
+  <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+    // serialize()：将表单提交数据"序列化"为请求体格式
+    $(function () {
+      var msg1 = $("#form").serialize();
+      alert(msg1);
+
+      var msg2 = $("#form").serializeArray();
+      console.info(msg2);
+    })
+  </script>
+</head>
+<body>
+<form id="form">
+  Username:<input type="text" name="username" value="tom"/><br>
+  Password:<input type="password" name="password" value="123"/><br>
+</form>
+</body>
+</html>

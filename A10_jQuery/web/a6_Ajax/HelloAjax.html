@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+一、Ajax流程
+    > 1.获得XMLHttpRequest对象(浏览器内置ajax引擎)
+    > 2.设置onreadystatechange回调函数
+    > 3.设置Http请求方式
+    > 4.发送Http请求，POST则需传参请求体
+    > 5.在回调函数中根据 readyState && status 进行发送\接收数据处理
+二、jQuery中的Ajax
+    > $.ajax(url,[setting])     底层Ajax请求方式，以Json格式传入参数。key success指明得到响应的回调函数
+
+    > $.get(url,data,fn,returnType)     method=get发送请求
+    > $.post(url,data,fn,returnType)    method=post发送请求
+    > DOM.load(url,data,fn)     DOM内容体中插入load()返回的结果
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+      // 发送ajax请求
+      var xmlHttp = null;
+
+      function sendAjax() {
+          // 1.获取XMLHttpRequest对象
+          if (window.XMLHttpRequest) { // 浏览器对象
+              xmlHttp = new XMLHttpRequest();
+          } else if (window.ActiveXObject) {
+              xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          if (xmlHttp != null) {
+              // 2.onreadystatechange事件句柄：绑定回调函数，当readyState发生改变时调用
+              xmlHttp.onreadystatechange = callback;
+              // 3.设置请求方式 open(method,url,Async)
+              // url:请求目标地址
+              var url = "http://localhost:8080/jQuery/a1_Ajax.HelloAjax";
+              // Async:异步
+              xmlHttp.open("GET", url, true);
+              // 4.发送请求
+              xmlHttp.send();
+          }
+      }
+
+      // 回调函数：总计执行4次
+      function callback() {
+          if (xmlHttp.readyState === 4) {  // loaded
+              if (xmlHttp.status === 200) {
+                  alert(xmlHttp.responseText);
+              }
+          } else {
+              alert("Problem retrieving XML data");
+          }
+      }
+  </script>
+</head>
+<body>
+<input type="button" value="按钮" onclick="sendAjax()">
+</body>
+</html>

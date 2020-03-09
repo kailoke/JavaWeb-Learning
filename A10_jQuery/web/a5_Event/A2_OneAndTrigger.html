@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+> 一、$.one(type,fn)  : 事件执行一次后自动unbind()
+> 二、$.trigger(event)：触发元素匹配的所有event
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery一次性事件与事件触发</title>
+  <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+      $(function () {
+          // 1.一次性事件
+          $("#btn1").one("click", function () {
+              alert("只能点1次哦");
+          });
+
+          // 2.事件触发
+          var btn2 = $("#btn2");
+          btn2.click(function () {
+              alert("点我！");
+          });
+          btn2.mouseover(function () {
+              $(this).trigger("click");
+          })
+      })
+  </script>
+</head>
+<body>
+<input type="button" id="btn1" value="按钮1"><br>
+<input type="button" id="btn2" value="按钮2">
+</body>
+</html>

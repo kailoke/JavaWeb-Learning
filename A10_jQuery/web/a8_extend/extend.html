@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+> $.extend({fn, ...})     声明全局对象的方法
+
+> $.fn.extend({fn, ...})  声明jQuery对象的方法
+
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery扩展机制:extend | fn.extend</title>
+  <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+      // 一、$.extend 对全局jQuery对象扩展(插件)
+      // 类似静态方法直接用 jQuery全局对象($)调用
+      $.extend({
+          maxValue: function (a, b) {
+              return a > b ? a : b;
+          },
+          minValue: function (a, b) {
+              return a < b ? a : b;
+          }
+      });
+
+      $.fn.extend({
+          serializeJson: function () {
+              // 结合 serializeArray 使用 $.fn.extend({})
+              var serializeArray = this.serializeArray();
+              // 创建js对象，注意json对象同key需要值为数组
+              var json = {};
+              $(serializeArray).each(function () {
+                  // key不存在
+                  if (json[this.name] == null) {
+                      json[this.name] = this.value;
+                  // key存在
+                  } else {
+                      // key的值不是数组，则将key的值转为数组
+                      if (!json[this.name].push) {
+                          json[this.name] = [json[this.name]];
+                      }
+                      // 将新值push进key的数组
+                      json[this.name].push(this.value || "");
+                  }
+              });
+              return json;
+          }
+      });
+
+      $(function () {
+          // 调用全局$对象方法
+          // alert($.maxValue(10, 20));
+          // alert($.minValue(10, 20));
+
+          // 调用jQuery对象方法
+          var serializeJson = $("#form").serializeJson();
+          console.info(serializeJson);
+      })
+
+  </script>
+</head>
+<body>
+<form id="form">
+  <input type="text" name="username" value="tom"/>
+  <input type="password" name="password" value="123"/>
+  <input type="checkbox" name="hobby" value="soccer" checked="checked"/>足球
+  <input type="checkbox" name="hobby" value="basket" checked="checked"/>篮球
+  <input type="checkbox" name="hobby" value="badminton" checked="checked"/>羽毛球
+  <input type="submit" value="提交">
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>验证用户名是否可以使用</title>
+  <script type="text/javascript" src="../js/XmlHttp.js"></script>
+  <script type="text/javascript">
+      // 验证用户名
+      function checkUsername() {
+          // 1.得到信息
+          var name = document.getElementById("username").value;
+          // 2.使用Ajax发送请求&&请求体
+          var xmlHttp = getXmlHttp();
+          xmlHttp.onreadystatechange = function () {
+              if (xmlHttp.readyState === 4) {
+                  if (xmlHttp.status === 200) {
+                      document.getElementById("username_msg").innerHTML = xmlHttp.responseText;
+                  }
+              }
+          };
+          xmlHttp.open("POST", "/jQuery/checkUsername");
+          // POST请求头需要设置RequestHeader编码方式
+          xmlHttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+          xmlHttp.send("username=" + name);
+      }
+  </script>
+</head>
+<body>
+用户名：<input type="text" id="username" name="username" onblur="checkUsername()"/><span id="username_msg"></span><br>
+<h5>ps:tom 已被占用</h5>
+</body>
+</html>

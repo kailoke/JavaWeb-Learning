@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 返回同胞元素，但不包括选定元素自身
+> siblings([expr])      (~)返回所有同胞元素
+
+> next([expr])          (+)被选元素的下一个同胞元素
+> nextAll               被选元素的所有跟随的同胞元素
+> nextUntil([e|e][,f])  返回介于两个给定参数之间的所有跟随的同胞元素
+
+> prev([expr])
+> prevAll([expr])
+> preUntil([e|e][,f])
+
+> closest(e,[c|o|e])
+> offsetParent()
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>遍历：同胞元素</title>
+  <style type="text/css">
+    .siblings * {
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+    .highlight {
+      color: red;
+      border: 2px solid red;
+    }
+  </style>
+  <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $("#btn").click(function () {
+              $("h2").siblings().toggleClass("highlight");
+          })
+      });
+  </script>
+</head>
+<body class="siblings">
+<div>div (父)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <p>p</p>
+</div>
+<button id="btn">显示&lth2&gtsiblings</button>
+</body>
+</html>

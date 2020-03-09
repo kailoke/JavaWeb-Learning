@@ -21,32 +21,32 @@
     > :disabled
 -->
 <head>
-    <meta charset="UTF-8">
-    <title>表单过滤器</title>
-    <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
-    <script>
-        $(function () {
-            // username和password失去焦点后，判断录入的数据不能为空
-            $(":input[name=username],:password").blur(function () {
-                // 获取数据
-                var username = $(this).val();
-                if ($.trim(username) === ""){
-                    alert($(this).attr("name") + "不能为空！");
-                }
-            });
+  <meta charset="UTF-8">
+  <title>表单过滤器</title>
+  <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+  <script>
+      $(function () {
+          // username和password失去焦点后，判断录入的数据不能为空
+          $(":input[name=username],:password").blur(function () {
+              // 获取数据
+              var username = $(this).val();
+              if ($.trim(username) === "") {
+                  alert($(this).attr("name") + "不能为空！");
+              }
+          });
 
-            // 对button添加点击事件，提交表单(提交事件)
-            $(":button").click(function () {
-                $("form").submit();
-            });
-        });
-    </script>
+          // 对button添加点击事件，提交表单(提交事件)
+          $(":button").click(function () {
+              $("form").submit();
+          });
+      });
+  </script>
 </head>
 <body>
-    <form>
-        Username:<input type="text" name="username"><br>
-        Password:<input type="password" name="password"><br>
-        <input type="button" value="按钮">
-    </form>
+<form>
+  Username:<input type="text" name="username"><br>
+  Password:<input type="password" name="password"><br>
+  <input type="button" value="按钮">
+</form>
 </body>
 </html>

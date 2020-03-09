@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+> clone() : 复制this对象
+
+> replaceWith([events,deepEvents]) : this被参数对象替换。event是否保留事件，1.5以上默认false
+> replaceAll([events,deepEvents])  : this去替换参数对象。deepEvent是否保留子元素的事件
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>文档操作：替换|克隆</title>
+  <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+      $(function () {
+          // 将 #d1 中第一个<p>替换 #d2中的内容
+          var clone = $("#d1 :first").clone();
+          // replaceWith
+          // replaceAll
+          $("#d2 span:last").replaceWith($("#d1 :first").clone());
+          clone.replaceAll($("#d2>:first"));
+      })
+  </script>
+
+</head>
+<body>
+<div id="d1">
+  <p>
+    <a>p1</a>
+  </p>
+  <p></p>
+</div>
+<div id="d2">
+  <span>span1</span>
+  <span>span2</span>
+</div>
+</body>
+</html>

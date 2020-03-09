@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 向上遍历DOM树
+> parent([expr])  被选元素的直接父元素
+> parents([expr]) 被选元素的"所有"父元素，直到根元素<html>
+> parentUntil()   返回介于两个给定元素之间的所有父元素
+  -->
+<head>
+  <meta charset="UTF-8">
+  <title>遍历：父元素</title>
+  <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+  <style type="text/css">
+    .ancestors * {
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+
+    .highlight {
+      color: red;
+      border: 2px solid red;
+    }
+  </style>
+  <script type="text/javascript">
+      $(document).ready(function () {
+          // 一、parent()
+          $("#btn1").click(function () {
+              $("span").parent().toggleClass("highlight");
+          });
+
+          // 二、parents()
+          $("#btn2").click(function () {
+              $("span").parents().toggleClass("highlight");
+          })
+      });
+  </script>
+</head>
+<body>
+<div class="ancestors">
+  <div style="width:500px;">div (曾祖父)
+    <ul>ul (祖父)
+      <li>li (直接父)
+        <span>span</span>
+      </li>
+    </ul>
+  </div>
+
+  <div style="width:500px;">div (祖父)
+    <p>p (直接父)
+      <span>span</span>
+    </p>
+  </div>
+</div>
+
+<button id="btn1">显示直接父节点</button>
+<button id="btn2">显示所有父节点</button>
+</body>
+</html>

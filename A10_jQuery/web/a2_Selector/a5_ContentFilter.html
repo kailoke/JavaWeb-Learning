@@ -3,9 +3,10 @@
 <!--
 内容过滤器：从结果集中根据内部文本内容进行选择
 > :contains(text)   this包含text文本
-> :has(selector)    this包含指定元素
-> :parent           this含有子元素或文本(this是父节点)
-> :empty            this是空元素，不包含子元素&&文本
+> :has($selector)   this包含指定元素
+
+> :parent           this是父节点，含有子元素 || innerHtml(text)
+> :empty            this是空元素，不含子元素 && innerHtml(text)
 -->
 <head>
   <meta charset="UTF-8">
@@ -13,42 +14,41 @@
   <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
 
   <style type="text/css">
-    .colorGrey{
-      color:grey;
+    .colorGrey {
+      color: grey;
     }
   </style>
 
   <script type="text/javascript">
-    $(function () {
-        // 1.含有文本内容java的<div>字体颜色为红色
-        $("div:contains(java)").css("color","red");
+      $(function () {
+          // 1.含有文本内容java的<div>字体颜色为红色
+          $("div:contains(java)").css("color", "red");
 
-        // 2.不包含子元素||文本的空元素的div文本内容为"这是一个空的div"
-        $("div:empty").html("这是一个空的div");
+          // 2.不包含子元素||文本的空元素的div文本内容为"这是一个空的div"
+          $("div:empty").html("这是一个空的div");
 
-        // 3.包含<a>元素的div字体颜色为灰色
-        $("div:has(a)").addClass("colorGrey");
+          // 3.包含<a>元素的div字体颜色为灰色
+          $("div:has(a)").addClass("colorGrey");
 
-        // 4.所有含有元素的span字体为蓝色
-        $("div:parent").css("color","blue").hide("slow");
-    })
+          // 4.所有含有元素的span字体为蓝色
+          $("div:parent").css("color", "blue").hide("slow");
+      })
 
 
-    
   </script>
 </head>
 <body>
-  <div>java</div>
-  <div>ios</div>
-  <div></div>
-  <div>
-    <a>中国</a>欢迎您
-  </div>
-  <div>
-    世界第一语言<a>java</a>
-  </div>
-  <div>
-      <span>今天天气不错</span>
-  </div>
+<div>java</div>
+<div>ios</div>
+<div></div>
+<div>
+  <a>中国</a>欢迎您
+</div>
+<div>
+  世界第一语言<a>java</a>
+</div>
+<div>
+  <span>今天天气不错</span>
+</div>
 </body>
 </html>

@@ -5,6 +5,9 @@
 二、作用：DOM就绪后执行fn方法
 三、简写：$(fn)
   > $ = jQuery  <-  windows.$ = jQuery
+四、其他：
+  > 参数：DOM，将DOM对象转换为jQuery对象
+  > 参数："selector"，选择器表达式
 -->
 <head>
   <meta charset="UTF-8">
@@ -12,20 +15,20 @@
   <!-- 外部链接引入jQuery -->
   <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
   <script type="text/javascript">
-    // 1.完整调用
-    jQuery(document).ready(function () {
-        alert("hello jQuery full method invoke")
-    });
+      // 1.完整调用
+      jQuery(document).ready(function () {
+          alert("hello jQuery full method invoke")
+      });
 
-    // 2.简写调用
-    jQuery(function () {
-       alert("hello jQuery : jQuery(callback")
-    });
+      // 2.简写调用
+      jQuery(function () {
+          alert("hello jQuery : jQuery(callback")
+      });
 
-    // 3.jQuery的全局window引用对象 "$" 调用
-    $(function () {
-        alert("hello jQuery abbreviation")
-    });
+      // 3.jQuery的全局window引用对象 "$" 调用
+      $(function () {
+          alert("hello jQuery abbreviation")
+      });
   </script>
 </head>
 <body>

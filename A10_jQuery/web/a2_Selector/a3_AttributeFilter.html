@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-CN">\
 <!--
-属性过滤器：不使用':'，使用'[AttributeFilter]'
+属性过滤器：将选择器表达式作为JS对象，但不能使用.访问属性
 > selector[field]           this含有field属性
 > selector[field = 'text']  this含有filed=text的属性
-> ^=text  属性值 start with
-> $=text  属性值 end with
-> *=text  属性值 has
-> Selector[filter1][filter1] ... 复合过滤器
--->
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+  >               ^=text      属性值 start with
+  >               $=text      属性值 end with
+  >               *=text      属性值 has
+  > Selector[filter1][filter1] ... 复合过滤器
+  -->
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
 

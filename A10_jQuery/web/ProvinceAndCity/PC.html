@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>省份的城市信息异步获取</title>
+  <script type="text/javascript" src="../js/XmlHttp.js"></script>
+  <script type="text/javascript">
+      function getProvince() {
+          var xmlHttp = getXmlHttp();
+          xmlHttp.onreadystatechange = function () {
+              if (xmlHttp.readyState === 4) {
+                  if (xmlHttp.status === 200) {
+                      //填充城市信息
+                      var citiesText = xmlHttp.responseText;
+                      var citiesArr = citiesText.split(",");
+                      for (var i = 0; i < citiesArr.length; i++) {
+                          // 创建 <option>
+                          var option = document.createElement("option");
+                          // 初始化信息
+                          option.innerHTML = citiesArr[i];
+                          option.value = citiesArr[i];
+                          // 追加
+                          document.getElementById("province").add(option);
+                      }
+                  }
+              }
+          };
+          xmlHttp.open("POST", "/jQuery/Province");
+          xmlHttp.send(null);
+      }
+
+      function getCities() {
+          // 得到省份名称
+          var provinceEle = document.getElementById("province");
+          var options = provinceEle.options;
+          var option = options[provinceEle.selectedIndex];
+          var province = option.innerHTML;
+          // 发送Http请求
+          var xmlHttp = getXmlHttp();
+          xmlHttp.onreadystatechange = function () {
+              if (xmlHttp.readyState === 4) {
+                  if (xmlHttp.status === 200) {
+                      // 重置信息
+                      document.getElementById("city").innerHTML = "<option value=\"0\">--请选择城市--</option>";
+                      // 填充城市信息
+                      var responseText = xmlHttp.responseText;
+                      var cityArr = responseText.split(",");
+                      for (var i = 0; i < cityArr.length; i++) {
+                          var option = document.createElement("option");
+                          option.innerHTML = cityArr[i];
+                          document.getElementById("city").add(option);
+                      }
+                  }
+              }
+          };
+          xmlHttp.open("POST", "/jQuery/City");
+          xmlHttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+          xmlHttp.send("province=" + province);
+      }
+
+
+  </script>
+</head>
+<body onload="getProvince()">
+<select id="province" onchange="getCities()">
+  <option value="0">--请选择省份--</option>
+</select>
+<select id="city">
+  <option value="0">--请选择城市--</option>
+</select>
+</body>
+</html>

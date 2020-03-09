@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+一、内容：
+  > text()  获取\设置元素的文本
+  > html()  获取\设置元素的内容(包括HTML标记)
+  > val()   获取\设置元素的value字段值
+二、属性：
+  > attr({name,value})
+  > attr(name,fn(i,oldValue))
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>获取 && 设置</title>
+  <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+          // 一、获取/设置内容
+          $("#btn1").click(function () {
+              alert("Text: " + $("#test1").text());
+          });
+          $("#btn2").click(function () {
+              alert("HTML: " + $("#test1").html());
+          });
+          $("#btn3").click(function () {
+              alert("Value: " + $("#test2").val());
+          });
+
+          // 二、获取/设置属性
+          $("button").click(function () {
+              alert($("#w3s").attr("href"));
+          });
+      });
+  </script>
+</head>
+<body>
+<p id="test1">这是段落中的<b>粗体</b>文本。</p>
+<button id="btn1">显示文本</button>
+<button id="btn2">显示 HTML</button>
+
+<p>姓名：<input type="text" id="test2" value="米老鼠"></p>
+<button id="btn3">显示值</button>
+
+<p><a href="http://www.w3school.com.cn" id="w3s">W3School.com.cn</a></p>
+<button id="btn4">显示 href 值</button>
+</body>
+</html>

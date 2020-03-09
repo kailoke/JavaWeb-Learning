@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 向下遍历DOM树
+> children([expr])  (>)被选元素的"所有直接"子元素
+> find([expr])      被选元素所有后代元素，一路向下直到最后一个后代
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>遍历：后代元素</title>
+  <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+  <style type="text/css">
+    .descendants * {
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+
+    .highlight {
+      color: red;
+      border: 2px solid red;
+    }
+  </style>
+  <script type="text/javascript">
+      $(function () {
+          // 1.children()
+          $("#btn1").click(function () {
+              $("div").children("p").toggleClass("highlight");
+          });
+          // 2.find()
+          $("#btn2").click(function () {
+              $("div").find("p,span").toggleClass("highlight");
+          });
+      });
+  </script>
+</head>
+<body>
+<div class="descendants" style="width:500px;">div (当前元素)
+  <p>p (子)
+    <span>span (孙)</span>
+  </p>
+  <span>p (child)
+    <span>span (孙)</span>
+  </span>
+
+</div>
+<button id="btn1">显示直接子元素</button>
+<button id="btn2">显示所有子元素</button>
+</body>
+</html>

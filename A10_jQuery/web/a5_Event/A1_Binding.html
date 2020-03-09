@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- jQuery事件绑定
+二、bind(name,fn) / unbind(name,fn)
+二、$.eventName(fn)
+三、live () / die() : deprecated since 1.7
+四、jQuery同一个事件可以多次附加。JS的同名事件会被重写
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery绑定机制</title>
+  <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+  <script type="text/javascript">
+      $(function () {
+          // 1.简化的绑定事件操作
+          $("#btn1").click(function () {
+              alert("点我1！");
+          });
+
+          // 2.绑定事件：bind(type,[data],fn)
+          $("#btn2").bind("click", function () {
+              alert("点我2!");
+          });
+
+          // 3.解除绑定：unbind(type,[data|fn])
+          $("#btn1").unbind("click");
+
+          // live() && die() deprecated since 1.7
+          // 可以为当前操作时不存在的DOM添加事件(后续创建)
+      })
+
+
+  </script>
+</head>
+<body>
+<input type="button" id="btn1" value="按钮1"><br>
+<input type="button" id="btn2" value="按钮2">
+</body>
+</html>
