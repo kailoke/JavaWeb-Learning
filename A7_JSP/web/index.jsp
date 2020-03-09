@@ -4,6 +4,6 @@
   <title>JSP index</title>
 </head>
 <body>
-JSP index.jsp：Hello!
+<h1>JSP index.jsp</h1>
 </body>
 </html>

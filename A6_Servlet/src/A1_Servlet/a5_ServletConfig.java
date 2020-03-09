@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Enumeration;
 
-/** ServletConfig
+/** ServletConfig：每个Servlet独有的配置
  * 一、作用：获得Servlet配置(web.xml中的 <...> in <Servlet>)
  * 二、获得Servlet单例对象：通过Servlet!.getServletConfig() 获得ServletConfig对象
  *      Servlet对象由Tomcat通过web.xml配置创建，并传参至Servlet.init(ServletConfig conf)进行初始化

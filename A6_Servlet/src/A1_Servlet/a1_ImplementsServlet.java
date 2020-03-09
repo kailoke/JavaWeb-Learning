@@ -4,8 +4,8 @@ package A1_Servlet;
 import javax.servlet.*;
 import java.io.IOException;
 
-/** Servlet入门程序：实现Servlet接口
- *
+/** Servlet继承方式
+ * > 继承 javax.servlet.Servlet
  */
 
 public class a1_ImplementsServlet implements Servlet {

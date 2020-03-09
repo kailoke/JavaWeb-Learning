@@ -5,7 +5,7 @@
   <title>Title</title>
 </head>
 <%--
-  显示 controller:a4_JSP_EL_JSTL.control.ServletShowDB 结果(请求转发)
+  显示 controller:a4_JSP_EL_JSTL.NameCheck.ServletShowDB 结果(请求转发)
 --%>
 <body>
 <h1>查询结果：
