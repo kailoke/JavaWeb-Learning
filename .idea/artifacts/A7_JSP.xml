@@ -11,9 +11,9 @@
           <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/commons-dbutils-1.3.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/c3p0-0.9.1.2.jar" />
+          <element id="file-copy" path="F:/apache-tomcat-8.5.49/lib/jsp-api.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/standard.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/jstl.jar" />
-          <element id="library" level="application" name="jsp-api" />
         </element>
       </element>
     </root>
