@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" build-on-make="true" name="A9_ListenerAndFilter">
+  <artifact type="exploded-war" name="A9_ListenerAndFilter">
     <output-path>$PROJECT_DIR$/out/artifacts/A9_ListenerAndFilter</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="A9_ListenerAndFilter/web/Web" />

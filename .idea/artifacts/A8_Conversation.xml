@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="A8_Conversation">
+  <artifact type="exploded-war" build-on-make="true" name="A8_Conversation">
     <output-path>$PROJECT_DIR$/out/artifacts/A8_Conversation</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="A8_Conversation/web/Web" />
