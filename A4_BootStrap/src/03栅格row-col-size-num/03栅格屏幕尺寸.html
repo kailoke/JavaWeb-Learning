@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 栅格屏幕尺寸</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </head>
+<!-- 屏幕尺寸 			屏幕 		container最大宽度
+	xs 	extra small 	<768px 		None
+	sm 	small 			>=768px 	750px
+	md 	middle 			>=992px 	970px
+	lr 	large 			>=1200px 	1170px
+
+	响应式尺寸
+	* 设置屏幕尺寸s
+		> 大于s的屏幕尺寸自动继承列数设置
+		> 小于<s的屏幕尺寸每个元素占一行
+-->
+  <body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-3 col-sm-2 col-xs-1" style="border:1px red solid;">
+				11111111111
+			</div>
+			<div class="col-lg-4 col-md-3 col-sm-4 col-xs-5" style="border:1px red solid;">
+				22222222222
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" style="border:1px red solid;">
+				33333333333
+			</div>
+		</div>
+	</div>
+	<!-- 响应式尺寸 -->
+	<div class="container">
+		<div class="row">
+			<div class='col-md-3' style="border: darkgreen 1px solid;">
+				1111
+			</div>
+			<div class='col-md-3' style="border: darkgreen 1px solid";>
+				2222
+			</div>
+			<div class='col-md-3' style="border: darkgreen 1px solid";>
+				3333
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

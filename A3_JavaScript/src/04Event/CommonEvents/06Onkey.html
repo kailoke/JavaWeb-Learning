@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>键位弹起事件</title>
+		<script>
+			function keyup() {
+				alert('键位up');
+			}
+			function keypress() {
+				confirm('键位press');
+			}
+			function keydown() {
+				alert('键位down');
+			}
+		</script>
+	</head>
+<!--
+	一、键位事件：焦点对象进行按键时发生的事件
+		> onkeydown 	键盘代码，即键盘键被物理按下
+		> onkeypress 	ANSI字符，即按下的键盘键有对应的ANSI字符
+		> onkeyup
+	二、 (down || press) && up 同时存在时， down > press ! up，up不执行
+-->
+	<body>
+		<input type="text" onkeyup="keyup()" onkeypress="keypress()"/>
+	</body>
+</html>

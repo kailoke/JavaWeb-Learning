@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>function函数</title>
+		<script>
+			// function 方法关键字，不需要定义返回值类型(弱类型)
+			// 参数列表(argsNoType)，参数定义·不能使用var·
+			function sum(a,b){
+				return a+b;		// 若未定义return值，则return undefined
+			}
+			
+			alert(sum(3,3));
+			
+			// 没有方法重载，且同名时最后定义的函数覆盖之前的所有同名定义
+			// 不需要匹配参数列表也能调用，缺省值为 undefined
+			// ---> 函数名唯一且必定有返回值
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

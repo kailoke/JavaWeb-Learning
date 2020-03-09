@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>function构造函数</title>
+		<script>
+			// function构造函数声明对象
+			function Person(n,a){
+				// 声明成员属性
+				this.name = n;
+				this.age = a;
+			}
+			// 创建对象
+			var p = new Person("小张",18);
+			alert(p);
+			// 访问对象属性
+			alert(p.name);
+			alert(p.age);
+			// 设置对象属性
+			p.name = "小王";
+			p.age = 20;
+			alert(p.name);
+			alert(p.age);
+			
+			// 增加属性，声明并赋值
+			p.gender = '男';
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

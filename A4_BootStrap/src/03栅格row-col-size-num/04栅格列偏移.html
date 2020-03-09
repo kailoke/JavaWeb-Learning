@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 列偏移</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<style>
+		#s1 {
+			background-color: gray;
+		}
+	</style>
+  </head>
+<!-- 列偏移	col-lg-offset-4
+	* 若偏移量超过12，则换行后重新偏移
+-->
+  <body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3" id="s1">
+				col-lg-3
+			</div>
+			
+			<div class="col-lg-2 col-lg-offset-7" id="s1">
+				col-lg-2
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

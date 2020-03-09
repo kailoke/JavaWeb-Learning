@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 1.直接量语法创建正则对象		---> 表单校验
+			var reg1 = /^\s*$/;	// 0~多个空格
+			var reg2 = /^\s+$/;	// 1~多个空格
+			
+			// 2.常用方法 RegExp!.test(string)，完全匹配正则返回true，else false
+			var flag1 = reg1.test(" 1");
+			alert(flag1);
+			
+			var flag2 = reg2.test(" a   ");
+			alert(flag2);
+			
+			// 普通方式.test() 全部字符不符合正则返回false，只要满足正则的字符返回true
+			// 用于字符串查找、替换
+			var reg3 = /\s+/;	// 1~多个空格
+			var flag3 = reg3.test(" a   ");
+			alert(flag3);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

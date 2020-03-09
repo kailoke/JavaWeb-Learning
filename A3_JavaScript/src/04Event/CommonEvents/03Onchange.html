@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>value发生改变事件</title>
+		<script>
+			function run1() {
+				alert('值发生改变');
+			}
+			
+			
+		</script>
+	</head>
+<!-- 
+	域内容改变事件：事件源的value值发生改变
+-->
+	<body>
+		<select name='province' onchange="run1()">
+			<option value="bj">北京</option>
+			<option value="sh">上海</option>
+			<option value="gz">广州</option>
+		</select>
+	</body>
+</html>

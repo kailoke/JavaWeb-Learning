@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script>
+/* DOM对象：document
+		DOM对象，获取元素(节点)对象的相关方法
+	1. obj  getElementById()			通过元素ID获取指定的元素对象，没有则null
+	2. list getElementsByName()		通过元素name属性获取符合要求的所有元素，返回数组(或空数组)
+	3. list getElementsByTagName()	通过元素的元素名属性获取符合要求的所有元素
+	4. list getElementsByClassName()	通过元素的class属性获取符合要求的所有元素
+	
+	** document对象是已经加载到浏览器 内存中的对象
+*/
+	</script>
+	<body>
+		<!-- 1. 元素指明id属性 -->
+		<input type="text" id='t1'/>
+		
+		<!-- 2. 元素指明name属性 -->
+		<input type="checkbox" name='hobby' value="red"/>
+		<input type="checkbox" name='hobby' value="code"/>
+		<input type="checkbox" name='hobby' value="run"/>
+		
+		<!-- 3. TagName:标签名 -->
+		<ul>
+			<li>javaEE</li>
+			<li>android</li>
+			<li>ios</li>
+			<li>php</li>
+		</ul>
+		
+		<!-- 4. 元素指明class属性 -->
+		<input type="radio" name="gender" value='man' class="h1"/>
+		<input type="radio" name="gender" value='woman' class='h1'/>
+		
+		<script>
+			// 1.返回特定元素
+			var t1 = document.getElementById("t1");	// 不存在元素:null
+			alert(t1);
+			
+			// 2.NodeList
+			var arr2 = document.getElementsByName("hobby");
+			alert(arr2.length);
+			
+			// 3.返回标签名数组
+			var arr3 = document.getElementsByTagName("li");
+			alert(arr3.length);
+			
+			// 4.NodeList
+			var arr4 = document.getElementsByClassName("h1");
+			confirm(arr4.length);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouseover与mouseenter事件</title>
+</head>
+<style>
+    #box{
+        width: 100px;
+        height: 200px;
+        background: #ccc;
+    }
+    #box div{
+        width: 100px;
+        height: 100px;
+        background: #B3CD57;
+    }
+</style>
+<body>
+<div id="box">
+    <div>这是一个内容</div>
+</div>
+</body>
+<script>
+    var oBox = document.getElementById("box");
+   oBox.onmouseover = function(){
+        console.log("移入");
+    };
+    oBox.onmouseout = function(){
+        console.log("移出");
+    };
+    // oBox.onmouseenter = function(){
+    //     console.log("移入");
+    // };
+    // oBox.onmouseleave = function(){
+    //     console.log("移出");
+    // };
+</script>
+</html>

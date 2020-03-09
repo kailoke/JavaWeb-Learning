@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>焦点事件</title>
+	</head>
+<!--
+	被用户选中的标签
+	> onfocus 	获取焦点	发生事件
+	> onblur 	失去焦点	发生事件
+ -->
+	<script>
+		function run1(){
+			alert('获取焦点啦');
+		}
+		
+		function run2(){
+			alert("失去焦点啦，食屎啦你！");
+		}
+	</script>
+	<body>
+		<input type="text" value="我是焦点，点我" onfocus="run1()"/><br />
+		<input type='text' value="点我，然后失去焦点" onblur="run2()" />
+	</body>
+</html>

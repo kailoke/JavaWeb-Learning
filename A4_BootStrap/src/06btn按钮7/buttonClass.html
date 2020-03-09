@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 按钮</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </head>
+<!-- 任何HTML标签，添加buttonClass:`btn`则会变为按钮
+	一、预置的7中按钮：btn-(ButtonClass)
+		> default
+		> primary
+		> success
+		> info
+		> warning
+		> danger
+		> link
+	二、按钮尺寸：btn-(Size)
+		> lg 	大
+		> (default) 	不写的默认大小
+		> sm 	小
+		> xs 	超小
+	三、激活状态(阴影效果+灰色遮罩)：active
+-->
+  <body>
+	<!-- Standard button -->
+	<button type="button" class="btn btn-default">（默认样式）Default</button><br />
+	<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+	<button type="button" class="btn btn-primary">（首选项）Primary</button><br />
+	<!-- Indicates a successful or positive action -->
+	<button type="button" class="btn btn-success">（成功）Success</button><br />
+	<!-- Contextual button for informational alert messages -->
+	<button type="button" class="btn btn-info">（一般信息）Info</button><br />
+	<!-- Indicates caution should be taken with this action -->
+	<button type="button" class="btn btn-warning">（警告）Warning</button><br />
+	<!-- Indicates a dangerous or potentially negative action -->
+	<button type="button" class="btn btn-danger">（危险）Danger</button><br />
+	<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+	<button type="button" class="btn btn-link">（链接）Link</button><br />
+	
+	
+	<!-- btn-(Size) -->
+	<p>
+	  <button type="button" class="btn btn-primary btn-lg">（大按钮）Large button</button>
+	  <button type="button" class="btn btn-default btn-lg">（大按钮）Large button</button>
+	</p>
+	<p>
+	  <button type="button" class="btn btn-primary">（默认尺寸）Default button</button>
+	  <button type="button" class="btn btn-default">（默认尺寸）Default button</button>
+	</p>
+	<p>
+	  <button type="button" class="btn btn-primary btn-sm">（小按钮）Small button</button>
+	  <button type="button" class="btn btn-default btn-sm">（小按钮）Small button</button>
+	</p>
+	<p>
+	  <button type="button" class="btn btn-primary btn-xs">（超小尺寸）Extra small button</button>
+	  <button type="button" class="btn btn-default btn-xs">（超小尺寸）Extra small button</button>
+	</p>
+	
+	
+	<!-- active -->
+	<button type="button" class="btn btn-primary btn-lg">Primary button</button>
+	<button type="button" class="btn btn-primary btn-lg active">Primary button</button><br />
+	<button type="button" class="btn btn-default btn-lg">Button</button>
+	<button type="button" class="btn btn-default btn-lg active">Button</button>
+	
+	
+  </body>
+</html>

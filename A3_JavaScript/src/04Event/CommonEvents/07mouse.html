@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>鼠标事件</title>
+		<script>
+			function run1(){
+				console.log('鼠标事件1');
+			}
+			function run2(){
+				console.log("鼠标事件2");
+			}
+			
+		</script>
+	</head>
+<!-- 
+	鼠标事件：
+	> onmouserover 	鼠标移入事件，移入其元素或其子元素都会触发
+	> onmouseout 	鼠标移出事件，移出其元素或其子元素都会触发
+	
+	> onmouseenter 	移入，仅进入事件源元素触发
+	> onmouseleave 	移出，仅移出事件源元素触发
+	
+	> onmouseup     鼠标点击被识别后，光标出现
+	> onmousedown   鼠标物理点击，未被识别
+	
+	> onmousemove 	移动
+	> onmousewheel 	滚轮
+-->
+	<body>
+		<input type="text" value="over/out"/ onmouseover="run1()" onmouseout="run2()">
+		<br />
+		<input type="text" value="enter/leave"/ onmouseenter="run1()" onmouseleave="run2()">
+		<br />
+		<input type="text" value="up"/ onmouseup="run1()" >
+		<br />
+		<input type="text" value="down"/ onmousedown="run2()">
+		<br />
+		<input type="text" value="move"/ onmousemove="run1()">
+		<br />
+		<input type="text" value="wheel"/ onmousewheel="run2()">
+	</body>
+</html>

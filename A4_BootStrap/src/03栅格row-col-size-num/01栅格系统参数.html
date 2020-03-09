@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 栅格系统参数</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </head>
+<!-- 栅格系统
+	一、创建栅格
+		> 容器：定义container
+		> 行  ：在container || container-fluid中定义行	.row
+		> 列在行中定义列				.col-屏幕尺寸-占用列数
+			> 某一行超过12列，则超过的列自动换行
+			> lg:large 	大尺寸，针对电脑屏
+	二、顺序：列元素的书写顺序，决定布局顺序
+	三、大小：列元素的占用列数，决定列元素的布局大小
+-->
+  <body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2" style="border:1px red solid;">
+				11111111111
+			</div>
+			<div class="col-lg-4" style="border:1px red solid;">
+				11111111111
+			</div>
+			<div class="col-lg-6" style="border:1px red solid;">
+				11111111111
+			</div>
+			<div class="col-lg-3" style="border:1px red solid;">
+				11111111111
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

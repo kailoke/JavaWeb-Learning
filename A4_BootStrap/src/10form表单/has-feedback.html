@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap JavaWeb</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </head>
+<!--  form-group校验状态: has-feedback   has-(success || warning || error)
+   
+-->
+  <body>
+	<div class="container">
+		<div class="form-group has-feedback has-success">
+		  <!-- control-label，可被控制 -->
+		  <label class="control-label" for="inputSuccess2">Input with success</label>
+		  <!-- 输入框 -->
+		  <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+		  <!-- 图标glyphic(on) -->
+		  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+		  <!-- 屏幕阅读器 -->
+		  <span id="inputSuccess2Status" class="sr-only">(success)</span>
+		</div>
+		
+		<div class="form-group has-warning has-feedback">
+		  <label class="control-label" for="inputWarning2">Input with warning</label>
+		  <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+		  <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+		  <span id="inputWarning2Status" class="sr-only">(warning)</span>
+		</div>
+		<div class="form-group has-error has-feedback">
+		  <label class="control-label" for="inputError2">Input with error</label>
+		  <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+		  <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+		  <span id="inputError2Status" class="sr-only">(error)</span>
+		</div>
+		<div class="form-group has-success has-feedback">
+		  <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+		  <div class="input-group">
+			<span class="input-group-addon">@</span>
+			<input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+		  </div>
+		  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+		  <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+		</div>
+	</div>
+	
+	
+	<div class="alert alert-success" role="alert">Well done! You successfully read this important alert message.</div>
+	<div class="alert alert-info" role="alert">Heads up! This alert needs your attention, but it's not super important.</div>
+	<div class="alert alert-warning" role="alert">Warning! Better check yourself, you're not looking too good.</div>
+	<div class="alert alert-danger" role="alert">Oh snap! Change a few things up and try submitting again.</div>
+  </body>
+</html>
