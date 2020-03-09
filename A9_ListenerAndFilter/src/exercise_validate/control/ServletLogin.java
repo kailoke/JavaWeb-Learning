@@ -1,7 +1,7 @@
-package z_authorization.control;
+package exercise_validate.control;
 
-import z_authorization.domain.User_table;
-import z_authorization.model.UserModel;
+import exercise_validate.domain.User_table;
+import exercise_validate.model.UserModel;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

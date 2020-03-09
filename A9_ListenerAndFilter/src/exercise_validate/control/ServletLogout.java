@@ -1,4 +1,4 @@
-package z_authorization.control;
+package exercise_validate.control;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

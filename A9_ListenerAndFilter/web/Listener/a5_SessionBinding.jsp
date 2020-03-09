@@ -1,4 +1,4 @@
-<%@ page import="Listener.a5_BeanSessionBinding" %>
+<%@ page import="a2_Listener.a5_BeanSessionBinding" %>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <html>
 <head>

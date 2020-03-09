@@ -1,4 +1,4 @@
-package z_authorization.filter;
+package exercise_validate.filter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

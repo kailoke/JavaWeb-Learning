@@ -1,4 +1,4 @@
-package z_authorization.domain;
+package exercise_validate.domain;
 
 /**
  * DB:test/user_table

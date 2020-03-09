@@ -1,7 +1,7 @@
-package z_authorization.model;
+package exercise_validate.model;
 
-import z_authorization.domain.User_table;
-import z_authorization.utils.JDBCUtils;
+import exercise_validate.domain.User_table;
+import exercise_validate.utils.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 

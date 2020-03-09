@@ -1,4 +1,4 @@
-package z_authorization.utils;
+package exercise_validate.utils;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
